@@ -13,3 +13,18 @@ body{
     background: #121212;
     color: #ffffff;
 }
+.stopwatch-container {
+    background: #1e1e24;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 380px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #00adb5;
+}
