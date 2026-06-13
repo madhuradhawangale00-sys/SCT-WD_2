@@ -24,3 +24,9 @@ function formatTime(ms) {
         (msecs < 10 ? "0" + msecs : msecs)
     );
 }
+
+// Update the DOM display
+function updateDisplay() {
+    elapsedTime = Date.now() - startTime;
+    display.textContent = formatTime(elapsedTime);
+}
