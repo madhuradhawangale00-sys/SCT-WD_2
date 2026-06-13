@@ -55,3 +55,16 @@ h1 {
 .btn:not(:disabled):hover {
     filter: brightness(1.2);
 }
+.laps-container {
+    max-height: 180px;
+    overflow-y: auto;
+    text-align: left;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.laps-container h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #bbb;
+}
