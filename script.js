@@ -37,3 +37,31 @@ function toggleButtons(running) {
     pauseBtn.disabled = !running;
     lapBtn.disabled = !running;
 }
+
+// Event Listeners
+startBtn.addEventListener('click', () => {
+    startTime = Date.now() - elapsedTime;
+    timerInterval = setInterval(updateDisplay, 10); // Updates roughly every 10ms
+    toggleButtons(true);
+});
+
+pauseBtn.addEventListener('click', () => {
+    clearInterval(timerInterval);
+    toggleButtons(false);
+});
+
+lapBtn.addEventListener('click', () => {
+    lapCount++;
+    const li = document.createElement('li');
+    li.innerHTML = `<span>Lap ${lapCount}</span> <strong>${formatTime(elapsedTime)}</strong>`;
+    lapsList.prepend(li); // Adds the newest lap to the top of the list
+});
+
+resetBtn.addEventListener('click', () => {
+    clearInterval(timerInterval);
+    elapsedTime = 0;
+    lapCount = 0;
+    display.textContent = "00:00:00.00";
+    lapsList.innerHTML = "";
+    toggleButtons(false);
+});
