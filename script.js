@@ -30,3 +30,10 @@ function updateDisplay() {
     elapsedTime = Date.now() - startTime;
     display.textContent = formatTime(elapsedTime);
 }
+
+// Button State Manager
+function toggleButtons(running) {
+    startBtn.disabled = running;
+    pauseBtn.disabled = !running;
+    lapBtn.disabled = !running;
+}
